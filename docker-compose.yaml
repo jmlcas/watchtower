@@ -1,18 +1,20 @@
-version: "3"
+version: "3.3"
 
 services:
 
   watchtower:
-    container_name: watchtower
     image: containrrr/watchtower
+    container_name: watchtower    
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - TZ=Europe/Madrid
       - WATCHTOWER_DEBUG=true
-      - WATCHTOWER_POLL_INTERVAL=86400
+      - WATCHTOWER_POLL_INTERVAL=86400   # 86400 diario | 604800 semanal 
       - WATCHTOWER_MONITOR_ONLY=true
       - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_LABEL_ENABLE=true
+      - WATCHTOWER_INCLUDE_RESTARTING=true      
       - WATCHTOWER_REMOVE_VOLUMES=true
 #      - WATCHTOWER_NOTIFICATIONS=email
 #      - WATCHTOWER_NOTIFICATION_EMAIL_FROM=from@gmail.com
@@ -22,6 +24,8 @@ services:
 #      - WATCHTOWER_NOTIFICATION_EMAIL_SUBJECTTAG=Server Container Updates
 #      - WATCHTOWER_NOTIFICATION_EMAIL_SERVER_USER=from@gmail.com
 #      - WATCHTOWER_NOTIFICATION_EMAIL_SERVER_PORT=587 
+       - WATCHTOWER_NOTIFICATIONS=shoutrrr        
+       - WATCHTOWER_NOTIFICATION_URL="telegram://BOT_TOKEN@telegram/?channels=CHAT_ID"
     restart: unless-stopped
 
         
