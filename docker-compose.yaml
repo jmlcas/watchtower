@@ -9,13 +9,9 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - TZ=Europe/Madrid
-      - WATCHTOWER_DEBUG=true
       - WATCHTOWER_POLL_INTERVAL=86400   # 86400 diario | 604800 semanal 
       - WATCHTOWER_MONITOR_ONLY=true
       - WATCHTOWER_CLEANUP=true
-      - WATCHTOWER_LABEL_ENABLE=true
-      - WATCHTOWER_INCLUDE_RESTARTING=true      
-      - WATCHTOWER_REMOVE_VOLUMES=true
 #      - WATCHTOWER_NOTIFICATIONS=email
 #      - WATCHTOWER_NOTIFICATION_EMAIL_FROM=from@gmail.com
 #      - WATCHTOWER_NOTIFICATION_EMAIL_TO=to@gmail.com
