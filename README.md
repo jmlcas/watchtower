@@ -5,7 +5,6 @@ WATCHTOWER_MONITOR_ONLY=true - Solo monitor: en este modo, Watchtower verifica l
 
 Descomenta lás líneas eliminando #  y pon los datos correctos
 
-Watchtower usa shoutrrr para enviar notificaciones a través de diferentes aplicaciones.
-
 Simplemente en Telegram reemplaza BOT_TOKEN y CHAT_ID con los tuyos propios.
 
+Simplemente en Gotify cambia la URL y el token.
