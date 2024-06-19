@@ -22,9 +22,10 @@ services:
 #      - WATCHTOWER_NOTIFICATION_EMAIL_SERVER_PORT=587 
 #      - WATCHTOWER_NOTIFICATIONS=shoutrrr        
 #      - WATCHTOWER_NOTIFICATION_URL="telegram://BOT_TOKEN@telegram/?channels=CHAT_ID"
+#      - WATCHTOWER_NOTIFICATION_GOTIFY_TLS_SKIP_VERIFY=true
 #      - WATCHTOWER_NOTIFICATIONS=gotify
-#      - WATCHTOWER_NOTIFICATION_GOTIFY_URL="http://localhost:8008"
-#      - WATCHTOWER_NOTIFICATION_GOTIFY_TOKEN="xxxxxxxxxxxx"
+#      - WATCHTOWER_NOTIFICATION_GOTIFY_URL=http://localhost:8008
+#      - WATCHTOWER_NOTIFICATION_GOTIFY_TOKEN=xxxxxxxxxxxx
     restart: unless-stopped
 
         
